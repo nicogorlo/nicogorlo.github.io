@@ -35,147 +35,12 @@
       content="https://nicolasgorlo.com/public/og-preview.jpg"
     />
 
-    <!-- Add Font Awesome -->
+    <!-- Stylesheets -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-
-    <style>
-      body {
-        line-height: 1.4;
-        font-size: 16px;
-        padding: 0 10px;
-        margin: 50px auto;
-        max-width: 650px;
-      }
-
-      #maincontent {
-        max-width: 42em;
-        margin: 15 auto;
-      }
-
-      .code-font {
-        font-family: "Courier New", Courier, monospace;
-      }
-
-      .section {
-        margin-bottom: 40px;
-      }
-
-      .social-icons {
-        margin-bottom: 20px;
-        text-align: left;
-      }
-
-      .social-icons a {
-        color: #333;
-        text-decoration: none;
-        margin-right: 15px;
-        font-size: 20px;
-      }
-
-      .social-icons a:hover {
-        color: #666;
-      }
-
-      .news-list {
-        list-style-type: disc;
-        padding-left: 20px;
-      }
-
-      .news-list li {
-        margin-bottom: 10px;
-      }
-
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 40px;
-        position: relative;
-      }
-
-      .header-content {
-        flex: 1;
-      }
-
-      .profile-image {
-        width: 150px;
-        height: 150px;
-        border-radius: 75px;
-        margin-left: 20px;
-        object-fit: cover;
-      }
-
-      @media (max-width: 768px) {
-        header {
-          flex-direction: column-reverse;
-          align-items: center;
-        }
-
-        .profile-image {
-          margin-left: 0;
-          margin-bottom: 20px;
-        }
-      }
-
-      .publication-item {
-        display: flex;
-        gap: 30px;
-        margin-bottom: 30px;
-        margin-left: 20px;
-        align-items: center;
-      }
-
-      .publication-image {
-        flex: 0 0 200px;
-      }
-
-      .publication-image img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-      }
-
-      .publication-content {
-        flex: 1;
-      }
-
-      .publication-title {
-        color: #000;
-        text-decoration: none;
-        font-weight: 300;
-        display: block;
-        margin-bottom: -10px;
-        font-size: 0.9em;
-      }
-
-      .publication-title:hover {
-        text-decoration: underline;
-      }
-
-      .publication-authors {
-        margin-bottom: -10px;
-        font-size: 0.85em;
-      }
-
-      .publication-venue {
-        font-style: italic;
-        font-size: 0.85em;
-      }
-
-      @media (max-width: 650px) {
-        .publication-item {
-          flex-direction: column;
-          gap: 15px;
-        }
-
-        .publication-image {
-          flex: 0 0 auto;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div class="container">
@@ -208,7 +73,7 @@
       <header>
         <div class="header-content">
           <h1>Nicolas Gorlo</h1>
-          <p class="code-font">ngorlo AT mit DOT edu</p>
+          <p class="code-font scrambled" onclick="unscrambleEmail(this)" data-animating="false" style="cursor: pointer">click to reveal email...</p>
         </div>
         <img
           src="assets/Profile_img_300kb.jpg"
@@ -278,7 +143,7 @@
               Graphs</a
             >
             <p class="publication-authors">
-              <strong>Nicolas Gorlo</strong>*, Lukas Schmid, Luca Carlone
+              <strong>Nicolas Gorlo</strong>*, Lukas Schmid, and Luca Carlone
             </p>
             <p class="publication-venue">
               IEEE Robotics and Automation Letters (RA-L) 2024.
@@ -302,45 +167,39 @@
             >
             <p class="publication-authors">
               <strong>Nicolas Gorlo</strong>*, Kenneth Blomqvist, Francesco
-              Milano, Roland Siegwart
+              Milano, and Roland Siegwart
             </p>
             <p class="publication-venue">2024 IEEE/CVF WACV.</p>
           </div>
         </div>
-      </div>
 
-      <div class="publication-item">
-        <div class="publication-image">
-          <img
-            src="assets/paper_figures/geranos_title_image.jpg"
-            alt="A UAV hovering."
-          />
-        </div>
-        <div class="publication-content">
-          <a
-            href="https://arxiv.org/abs/2312.01988"
-            class="publication-title"
-            >Geranos: a Novel Tilted-Rotors Aerial Robot for the Transportation of Poles</a
-          >
-          <p class="publication-authors">
-            <strong>Nicolas Gorlo</strong>*, Samuel Bamert*, Rafael Cathomen*, Gabriel Käppeli*, 
-            Mario Müller*, Tim Reinhart*, Henriette Stadler*, Hua Shen, Eugenio Cuniato, 
-            Marco Tognon, Roland Siegwart
-          </p>
-          <p class="publication-venue">IEEE Robotics and Automation Magazine (RA-M) 2024.</p>
+        <div class="publication-item">
+          <div class="publication-image">
+            <img
+              src="assets/paper_figures/geranos_title_image.jpg"
+              alt="A UAV hovering."
+            />
+          </div>
+          <div class="publication-content">
+            <a
+              href="https://arxiv.org/abs/2312.01988"
+              class="publication-title"
+              >Geranos: a Novel Tilted-Rotors Aerial Robot for the Transportation of Poles</a
+            >
+            <p class="publication-authors">
+              <strong>Nicolas Gorlo</strong>*, Samuel Bamert*, Rafael Cathomen*, Gabriel Käppeli*, 
+              Mario Müller*, Tim Reinhart*, Henriette Stadler*, Hua Shen, Eugenio Cuniato, 
+              Marco Tognon, and Roland Siegwart
+            </p>
+            <p class="publication-venue">IEEE Robotics and Automation Magazine (RA-M) 2024.</p>
+          </div>
         </div>
       </div>
-    </div>
-
-      <!-- <div class="section">
-        <h2>Other Projects</h2>
-        <p><a href="#">Project 1</a>: A brief description of this project.</p>
-        <p><a href="#">Project 2</a>: A brief description of this project.</p>
-      </div> -->
 
       <footer>
         <p>&copy; 2025 Nicolas Gorlo. All rights reserved.</p>
       </footer>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
