@@ -1,158 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Nicolas Gorlo.</title>
-    <meta name="description" content="Personal Webpage of Nicolas Gorlo.">
-    <link rel="canonical" href="https://nicolasgorlo.com">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Webpage of Nicolas Gorlo." />
+    <link rel="canonical" href="https://nicolasgorlo.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://nicolasgorlo.com">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Nicolas Gorlo.">
-    <meta property="og:description" content="Personal webpage of Nicolas Gorlo. Pushing the frontiers of spatial perception and embodied AI.">
-    <meta property="og:image" content="https://nicolasgorlo.com/public/og-preview.jpg">
-    
+    <meta property="og:url" content="https://nicolasgorlo.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nicolas Gorlo." />
+    <meta
+      property="og:description"
+      content="Personal webpage of Nicolas Gorlo. Pushing the frontiers of spatial perception and embodied AI."
+    />
+    <meta
+      property="og:image"
+      content="https://nicolasgorlo.com/public/og-preview.jpg"
+    />
+
     <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@nicolasgorlo">
-    <meta property="twitter:domain" content="nicolasgorlo.com">
-    <meta property="twitter:url" content="https://nicolasgorlo.com">
-    <meta name="twitter:title" content="Nicolas Gorlo.">
-    <meta name="twitter:description" content="Personal webpage of Nicolas Gorlo. Pushing the frontiers of spatial perception and embodied AI.">
-    <meta name="twitter:image" content="https://nicolasgorlo.com/public/og-preview.jpg">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@nicolasgorlo" />
+    <meta property="twitter:domain" content="nicolasgorlo.com" />
+    <meta property="twitter:url" content="https://nicolasgorlo.com" />
+    <meta name="twitter:title" content="Nicolas Gorlo." />
+    <meta
+      name="twitter:description"
+      content="Personal webpage of Nicolas Gorlo. Pushing the frontiers of spatial perception and embodied AI."
+    />
+    <meta
+      name="twitter:image"
+      content="https://nicolasgorlo.com/public/og-preview.jpg"
+    />
 
     <!-- Add Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
     <style>
-        body { 
+      body {
         line-height: 1.4;
-            font-size: 16px;
-            padding: 0 10px;
-            margin: 50px auto;
-            max-width: 650px;
-        }
+        font-size: 16px;
+        padding: 0 10px;
+        margin: 50px auto;
+        max-width: 650px;
+      }
 
-        #maincontent
-        {
-        max-width:42em;margin:15 auto;
+      #maincontent {
+        max-width: 42em;
+        margin: 15 auto;
+      }
 
-        }
+      .code-font {
+        font-family: "Courier New", Courier, monospace;
+      }
 
-        .code-font {
-            font-family: 'Courier New', Courier, monospace;
-        }
+      .section {
+        margin-bottom: 40px;
+      }
 
-        .section {
-            margin-bottom: 40px;
-        }
+      .social-icons {
+        margin-bottom: 20px;
+        text-align: left;
+      }
 
-        .social-icons {
-            margin-bottom: 20px;
-            text-align: left;
-        }
-        
-        .social-icons a {
-            color: #333;
-            text-decoration: none;
-            margin-right: 15px;
-            font-size: 20px;
-        }
-        
-        .social-icons a:hover {
-            color: #666;
-        }
+      .social-icons a {
+        color: #333;
+        text-decoration: none;
+        margin-right: 15px;
+        font-size: 20px;
+      }
 
-        .news-list {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-        
-        .news-list li {
-            margin-bottom: 10px;
-        }
+      .social-icons a:hover {
+        color: #666;
+      }
 
+      .news-list {
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+
+      .news-list li {
+        margin-bottom: 10px;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 40px;
+        position: relative;
+      }
+
+      .header-content {
+        flex: 1;
+      }
+
+      .profile-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 75px;
+        margin-left: 20px;
+        object-fit: cover;
+      }
+
+      @media (max-width: 768px) {
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        .header-content {
-            flex: 1;
+          flex-direction: column-reverse;
+          align-items: center;
         }
 
         .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 75px;
-            margin-left: 20px;
-            object-fit: cover;
+          margin-left: 0;
+          margin-bottom: 20px;
+        }
+      }
+
+      .publication-item {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 30px;
+        margin-left: 20px;
+        align-items: center;
+      }
+
+      .publication-image {
+        flex: 0 0 200px;
+      }
+
+      .publication-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      .publication-content {
+        flex: 1;
+      }
+
+      .publication-title {
+        color: #000;
+        text-decoration: none;
+        font-weight: 300;
+        display: block;
+        margin-bottom: -10px;
+        font-size: 0.9em;
+      }
+
+      .publication-title:hover {
+        text-decoration: underline;
+      }
+
+      .publication-authors {
+        margin-bottom: -10px;
+        font-size: 0.85em;
+      }
+
+      .publication-venue {
+        font-style: italic;
+        font-size: 0.85em;
+      }
+
+      @media (max-width: 650px) {
+        .publication-item {
+          flex-direction: column;
+          gap: 15px;
         }
 
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column-reverse;
-                align-items: center;
-            }
-
-            .profile-image {
-                margin-left: 0;
-                margin-bottom: 20px;
-            }
+        .publication-image {
+          flex: 0 0 auto;
         }
-    </style>	
-</head>
-<body>
+      }
+    </style>
+  </head>
+  <body>
     <div class="container">
-        <div class="social-icons">
-            <a href="https://linkedin.com/in/nicolas-gorlo" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://scholar.google.com/citations?user=Nicolas-Gorlo" target="_blank" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-            <a href="https://github.com/nicogorlo" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://www.researchgate.net/profile/Nicolas-Gorlo-2" target="_blank" aria-label="ResearchGate"><i class="fab fa-researchgate"></i></a>
+      <div class="social-icons">
+        <a
+          href="https://linkedin.com/in/nicolas-gorlo"
+          target="_blank"
+          aria-label="LinkedIn"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a
+          href="https://scholar.google.com/citations?user=Nicolas-Gorlo"
+          target="_blank"
+          aria-label="Google Scholar"
+          ><i class="fas fa-graduation-cap"></i
+        ></a>
+        <a
+          href="https://github.com/nicogorlo"
+          target="_blank"
+          aria-label="GitHub"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://www.researchgate.net/profile/Nicolas-Gorlo-2"
+          target="_blank"
+          aria-label="ResearchGate"
+          ><i class="fab fa-researchgate"></i
+        ></a>
+      </div>
+      <header>
+        <div class="header-content">
+          <h1>Nicolas Gorlo</h1>
+          <p class="code-font">ngorlo AT mit DOT edu</p>
         </div>
-        <header>
-            <div class="header-content">
-                <h1>Nicolas Gorlo</h1>
-                <p class="code-font">ngorlo AT mit DOT edu</p>
-            </div>
-            <img src="assets/Profile_img_300kb.jpg" alt="Nicolas Gorlo" class="profile-image">
-        </header>
+        <img
+          src="assets/Profile_img_300kb.jpg"
+          alt="Nicolas Gorlo"
+          class="profile-image"
+        />
+      </header>
 
-        <div class="section">
-            <p>I am a PhD student at the <a href="https://mit.edu/sparklab/">MIT Spark Lab</a>, working on Spatial Perception and Cognition for Robotics. I am very fortunate to be advised by <a href="https://lucacarlone.mit.edu/">Prof. Luca Carlone</a>.</p>
-            <p>Before MIT, I was a Product Exploration Intern at Apple Vision Products Group.</p>
-            <p>Prior to Apple, I was a Masters Student in Robotics, Systems and Control at ETH Zurich. I wrote my Masters Thesis on <a href="https://arxiv.org/abs/2405.00552">Long-Term Human Trajectory Prediction using 3D Dynamic Scene Graphs</a> as a Visiting Student Researcher at the MIT Spark Lab. At ETH Zurich, I further worked on several Research Projects at the <a href="https://asl.ethz.ch/">Autonomous Systems Lab</a> under the supervision of <a href="https://asl.ethz.ch/the-lab/people/person-detail.Mjk5ODE=.TGlzdC8yMDI4LDEyMDExMzk5Mjg=.html">Roland Siegwart</a>.</p>
+      <div class="section">
+        <p>
+          I am a PhD student at the
+          <a href="https://mit.edu/sparklab/">MIT Spark Lab</a>, working on
+          Spatial Perception and Cognition for Robotics. I am very fortunate to
+          be advised by
+          <a href="https://lucacarlone.mit.edu/">Prof. Luca Carlone</a>.
+        </p>
+        <p>
+          Before MIT, I was a Product Exploration Intern at Apple Vision
+          Products Group.
+        </p>
+        <p>
+          Prior to Apple, I was a Masters Student in Robotics, Systems and
+          Control at ETH Zurich. I wrote my Masters Thesis on
+          <a href="https://arxiv.org/abs/2405.00552"
+            >Long-Term Human Trajectory Prediction using 3D Dynamic Scene
+            Graphs</a
+          >
+          as a Visiting Student Researcher at the MIT Spark Lab. At ETH Zurich,
+          I further worked on several Research Projects at the
+          <a href="https://asl.ethz.ch/">Autonomous Systems Lab</a> under the
+          supervision of
+          <a
+            href="https://asl.ethz.ch/the-lab/people/person-detail.Mjk5ODE=.TGlzdC8yMDI4LDEyMDExMzk5Mjg=.html"
+            >Roland Siegwart</a
+          >.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>News and Updates</h2>
+        <ul class="news-list">
+          <li>
+            October 2024: Our paper on
+            <a href="https://ieeexplore.ieee.org/document/10720207"
+              >Long-Term Human Trajectory Prediction using 3D Dynamic Scene
+              Graphs</a
+            >
+            has been accepted at the
+            <i>IEEE Robotics and Automation Letters (RA-L)</i>.
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Peer-reviewed Publications</h2>
+
+        <div class="publication-item">
+          <div class="publication-image">
+            <img
+              src="assets/paper_figures/lp2_title_figure.png"
+              alt="Long-Term Human Trajectory Prediction using 3D Dynamic Scene Graphs"
+            />
+          </div>
+          <div class="publication-content">
+            <a href="https://github.com/MIT-SPARK/LP2" class="publication-title"
+              >Long-Term Human Trajectory Prediction using 3D Dynamic Scene
+              Graphs</a
+            >
+            <p class="publication-authors">
+              <strong>Nicolas Gorlo</strong>*, Lukas Schmid, Luca Carlone
+            </p>
+            <p class="publication-venue">
+              IEEE Robotics and Automation Letters (RA-L) 2024.
+            </p>
+          </div>
         </div>
 
-        <div class="section">
-            <h2>News and Updates</h2>
-            <ul class="news-list">
-                <li>October 2024: Our paper on <a href="https://ieeexplore.ieee.org/document/10720207">Long-Term Human Trajectory Prediction using 3D Dynamic Scene Graphs</a> has been accepted at the <i>IEEE Robotics and Automation Letters (RA-L)</i>.</li>
-            </ul>
+        <div class="publication-item">
+          <div class="publication-image">
+            <img
+              src="assets/paper_figures/isar_title_image.jpg"
+              alt="Sample from the ISAR benchmark dataset."
+            />
+          </div>
+          <div class="publication-content">
+            <a
+              href="https://nicogorlo.github.io/isar_wacv24/"
+              class="publication-title"
+              >ISAR: A Benchmark for Single- and Few-Shot Object Instance
+              Segmentation and Re-Identification</a
+            >
+            <p class="publication-authors">
+              <strong>Nicolas Gorlo</strong>*, Kenneth Blomqvist, Francesco
+              Milano, Roland Siegwart
+            </p>
+            <p class="publication-venue">2024 IEEE/CVF WACV.</p>
+          </div>
         </div>
+      </div>
 
-        <div class="section">
-            <h2>Peer-reviewed Publications</h2>
-            <p><a href="#">Project 1</a>: A brief description of this project.</p>
-            <p><a href="#">Project 2</a>: A brief description of this project.</p>
+      <div class="publication-item">
+        <div class="publication-image">
+          <img
+            src="assets/paper_figures/geranos_title_image.jpg"
+            alt="A UAV hovering."
+          />
         </div>
-
-        <div class="section">
-            <h2>Other Projects</h2>
-            <p><a href="#">Project 1</a>: A brief description of this project.</p>
-            <p><a href="#">Project 2</a>: A brief description of this project.</p>
+        <div class="publication-content">
+          <a
+            href="https://arxiv.org/abs/2312.01988"
+            class="publication-title"
+            >Geranos: a Novel Tilted-Rotors Aerial Robot for the Transportation of Poles</a
+          >
+          <p class="publication-authors">
+            <strong>Nicolas Gorlo</strong>*, Samuel Bamert*, Rafael Cathomen*, Gabriel Käppeli*, 
+            Mario Müller*, Tim Reinhart*, Henriette Stadler*, Hua Shen, Eugenio Cuniato, 
+            Marco Tognon, Roland Siegwart
+          </p>
+          <p class="publication-venue">IEEE Robotics and Automation Magazine (RA-M) 2024.</p>
         </div>
-
-        <footer>
-            <p>&copy; 2025 Nicolas Gorlo. All rights reserved.</p>
-        </footer>
+      </div>
     </div>
-</body>
-</html>
 
+      <!-- <div class="section">
+        <h2>Other Projects</h2>
+        <p><a href="#">Project 1</a>: A brief description of this project.</p>
+        <p><a href="#">Project 2</a>: A brief description of this project.</p>
+      </div> -->
+
+      <footer>
+        <p>&copy; 2025 Nicolas Gorlo. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>
