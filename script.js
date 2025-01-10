@@ -10,13 +10,11 @@ document.querySelectorAll('nav a').forEach(anchor => {
 
 
 function unscrambleEmail(element) {
-    // Base64 encoded and reversed email parts
     const encodedParts = {
-        u: 'b2xyb2du',  // ngorlo reversed and encoded
-        d: 'dWRlLnRpbQ==',  // mit.edu reversed and encoded
+        u: 'b2xyb2du',
+        d: 'dWRlLnRpbQ==',
     };
     
-    // Prevent multiple clicks
     if (element.getAttribute('data-animating') === 'true') return;
     element.setAttribute('data-animating', 'true');
     
@@ -24,7 +22,6 @@ function unscrambleEmail(element) {
     const domain = atob(encodedParts.d).split('').reverse().join('');
     const email = user + '@' + domain;
     
-    // Create animation
     let scrambled = 'click to reveal email...';
     let current = scrambled;
     let counter = 0;
@@ -44,5 +41,5 @@ function unscrambleEmail(element) {
             element.style.cursor = 'text';
             element.classList.remove('scrambled');
         }
-    }, 50); // Adjust speed of animation here
+    }, 50);
 }
