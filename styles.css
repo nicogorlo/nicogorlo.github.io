@@ -1,57 +1,37 @@
+/* Custom Properties */
+:root {
+    --color-text: #333;
+    --color-text-hover: #666;
+    --color-background: #fff;
+    --spacing-unit: 10px;
+    --max-width: 650px;
+    --border-radius: 10px;
+    --font-size-base: 16px;
+    --font-size-small: 0.85em;
+    --font-size-smaller: 0.8em;
+}
+
+/* Base Styles */
 body {
     line-height: 1.4;
-    font-size: 16px;
-    padding: 0 10px;
+    font-size: var(--font-size-base);
+    padding: 0 var(--spacing-unit);
     margin: 50px auto;
-    max-width: 650px;
+    max-width: var(--max-width);
+    color: var(--color-text);
 }
 
-#maincontent {
-    max-width: 42em;
-    margin: 15 auto;
+/* Layout */
+.container {
+    width: 100%;
 }
 
-.code-font {
-    font-family: "Courier New", Courier, monospace;
-}
-
-.section {
-    margin-bottom: 40px;
-}
-
-.social-icons {
-    margin-bottom: 20px;
-    text-align: left;
-    display: flex;
-    gap: 15px;
-}
-
-.social-icons a {
-    color: #333;
-    text-decoration: none;
-    margin-right: 15px;
-    font-size: 20px;
-}
-
-.social-icons a:hover {
-    color: #666;
-}
-
-.news-list {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-.news-list li {
-    margin-bottom: 10px;
-}
-
+/* Header Components */
 header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 40px;
-    position: relative;
 }
 
 .header-content {
@@ -61,16 +41,33 @@ header {
 .profile-image {
     width: 150px;
     height: 150px;
-    border-radius: 75px;
+    border-radius: 50%;
     margin-left: 20px;
     object-fit: cover;
 }
 
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.social-icons a:hover {
+    color: var(--color-text-hover);
+}
+
+/* Publications */
 .publication-item {
     display: flex;
     gap: 30px;
     margin-bottom: 30px;
-    margin-left: 20px;
     align-items: center;
 }
 
@@ -81,7 +78,7 @@ header {
 .publication-image img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
 }
 
 .publication-content {
@@ -89,50 +86,40 @@ header {
 }
 
 .publication-title {
-    color: #000;
-    font-style: bold;
+    color: var(--color-text);
+    font-weight: 500;
     text-decoration: none;
     display: block;
     margin-bottom: -10px;
-    font-size: 0.9em;
-}
-
-.publication-title:hover {
-    text-decoration: underline;
+    font-size: var(--font-size-small);
 }
 
 .publication-authors {
     margin-bottom: -10px;
-    font-size: 0.85em;
+    font-size: var(--font-size-small);
 }
 
 .publication-venue {
     font-style: italic;
-    font-size: 0.8em;
+    font-size: var(--font-size-smaller);
+}
+
+/* Utilities */
+.code-font {
+    font-family: "Courier New", Courier, monospace;
 }
 
 .scrambled {
     user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+    cursor: pointer;
 }
 
 .scrambled:hover {
-    color: #666;
+    color: var(--color-text-hover);
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-
-    .profile-image {
-        margin-left: 0;
-        margin-bottom: 20px;
-    }
-
     .container {
         display: flex;
         flex-direction: column;
@@ -143,12 +130,11 @@ header {
         width: 100%;
         justify-content: center;
         gap: 40px;
-        margin: 0 auto 30px auto;
+        margin-bottom: 30px;
     }
 
     .social-icons a {
         font-size: 28px;
-        margin-right: 0;
     }
 
     header {
@@ -159,21 +145,13 @@ header {
     }
 
     .header-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
         order: 2;
+        text-align: center;
     }
 
     .profile-image {
-        margin-left: 0;
-        margin-bottom: 20px;
+        margin: 0 0 20px 0;
         order: 1;
-    }
-
-    .code-font {
-        text-align: center;
     }
 }
 
@@ -181,9 +159,5 @@ header {
     .publication-item {
         flex-direction: column;
         gap: 15px;
-    }
-
-    .publication-image {
-        flex: 0 0 auto;
     }
 }
