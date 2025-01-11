@@ -15,8 +15,8 @@ document.querySelectorAll('nav a').forEach(anchor => {
 function unscrambleEmail(element) {
     const ANIMATION_SPEED = 50;
     const encodedParts = {
-        u: 'b2xyb2du',      // ngorlo reversed and encoded
-        d: 'dWRlLnRpbQ=='   // mit.edu reversed and encoded
+        u: 'b2xyb2du',
+        d: 'dWRlLnRpbQ=='
     };
     
     // Prevent multiple animations
