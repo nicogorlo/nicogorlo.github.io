@@ -21,6 +21,7 @@
     --spacing-section: 40px;    /* New spacing for sections */
     --spacing-item: 30px;       /* New spacing for items */
     --headline-margin: .5em;   /* New spacing for headlines */
+    --paragraph-margin: .5em;    /* New spacing for paragraphs */
 }
 
 /* Base Styles */
@@ -78,6 +79,15 @@ header {
 /* Section spacing */
 .section {
     margin-bottom: var(--spacing-section);
+}
+
+/* Section Content */
+.section p {
+    margin-bottom: var(--paragraph-margin);
+}
+
+.section p:last-child {
+    margin-bottom: 0;
 }
 
 /* Publications */
@@ -147,11 +157,9 @@ h1, h2, h3, h4, h5, h6 {
     list-style-position: inside;
     padding-left: 1.5em;
     text-indent: -1.5em;
-    margin-bottom: var(--spacing-section);
 }
 
 .news-list li {
-    margin-bottom: 1em;
     line-height: 1.6;
 }
 
