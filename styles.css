@@ -20,6 +20,7 @@
     --print-background: #fff;
     --spacing-section: 40px;    /* New spacing for sections */
     --spacing-item: 30px;       /* New spacing for items */
+    --headline-margin: .5em;   /* New spacing for headlines */
 }
 
 /* Base Styles */
@@ -134,6 +135,24 @@ header {
 .publication-venue {
     font-style: italic;
     font-size: var(--font-size-smaller);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: var(--headline-margin);
+}
+
+/* News List */
+.news-list {
+    list-style-position: inside;
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+    margin-bottom: var(--spacing-section);
+}
+
+.news-list li {
+    margin-bottom: 1em;
+    line-height: 1.6;
 }
 
 /* Utilities */
