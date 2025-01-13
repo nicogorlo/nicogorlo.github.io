@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>Nicolas Gorlo's Research Updates</title>
+  <link>https://nicolasgorlo.com</link>
+  <description>Latest research and publications in robotics and spatial perception</description>
+  <language>en-us</language>
+  <item>
+    <title>Paper accepted at IEEE RA-L</title>
+    <link>https://ieeexplore.ieee.org/document/10720207</link>
+    <description>Our paper on Long-Term Human Trajectory Prediction using 3D Dynamic Scene Graphs has been accepted</description>
+    <pubDate>Thu, 1 Oct 2024 12:00:00 GMT</pubDate>
+  </item>
+  <!-- Add more items as needed -->
+</channel>
+</rss>

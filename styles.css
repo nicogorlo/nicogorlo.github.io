@@ -1,3 +1,10 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Custom Properties */
 :root {
     --color-text: #333;
@@ -9,6 +16,10 @@
     --font-size-base: 16px;
     --font-size-small: 0.85em;
     --font-size-smaller: 0.8em;
+    --print-text-color: #000;
+    --print-background: #fff;
+    --spacing-section: 40px;    /* New spacing for sections */
+    --spacing-item: 30px;       /* New spacing for items */
 }
 
 /* Base Styles */
@@ -16,7 +27,7 @@ body {
     line-height: 1.4;
     font-size: var(--font-size-base);
     padding: 0 var(--spacing-unit);
-    margin: 50px auto;
+    margin: 50px auto;         /* Restore original margin */
     max-width: var(--max-width);
     color: var(--color-text);
 }
@@ -63,12 +74,33 @@ header {
     color: var(--color-text-hover);
 }
 
+/* Section spacing */
+.section {
+    margin-bottom: var(--spacing-section);
+}
+
 /* Publications */
+.publication {
+    margin-bottom: var(--spacing-unit);
+}
+
+.publication__image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+.publication__title {
+    font-size: 1.2em;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-unit);
+}
+
 .publication-item {
     display: flex;
-    gap: 30px;
-    margin-bottom: 30px;
-    align-items: center;
+    gap: var(--spacing-item);
+    margin-bottom: var(--spacing-item);
+    align-items: flex-start;    /* Change to flex-start for better alignment */
 }
 
 .publication-image {
@@ -90,12 +122,12 @@ header {
     font-weight: 500;
     text-decoration: none;
     display: block;
-    margin-bottom: -10px;
+    margin-bottom: 10px;        /* Restore original spacing */
     font-size: var(--font-size-small);
 }
 
 .publication-authors {
-    margin-bottom: -10px;
+    margin-bottom: 10px;        /* Restore original spacing */
     font-size: var(--font-size-small);
 }
 
@@ -130,7 +162,7 @@ header {
         width: 100%;
         justify-content: center;
         gap: 40px;
-        margin-bottom: 30px;
+        margin-bottom: var(--spacing-section);
     }
 
     .social-icons a {
@@ -150,8 +182,9 @@ header {
     }
 
     .profile-image {
-        margin: 0 0 20px 0;
+        margin: 0 0 var(--spacing-item) 0;
         order: 1;
+        margin-left: 0;
     }
 }
 
@@ -159,5 +192,22 @@ header {
     .publication-item {
         flex-direction: column;
         gap: 15px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        color: var(--print-text-color);
+        background: var(--print-background);
+    }
+    
+    .social-icons,
+    .scrambled {
+        display: none;
+    }
+    
+    a[href]::after {
+        content: " (" attr(href) ")";
     }
 }
