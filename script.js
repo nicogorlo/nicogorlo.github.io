@@ -73,3 +73,27 @@ function finishAnimation(element, interval) {
     element.style.cursor = 'text';
     element.classList.remove('scrambled');
 }
+
+/**
+ * @description Shares the current page using the Web Share API
+ * @returns {Promise<void>}
+ */
+async function sharePage() {
+    try {
+        await navigator.share({
+            title: 'Nicolas Gorlo - MIT PhD Student',
+            text: 'Check out Nicolas Gorlo\'s research in robotics and spatial perception',
+            url: window.location.href
+        });
+    } catch (err) {
+        console.log('Share failed:', err.message);
+    }
+}
+
+// Initialize share button if Web Share API is available
+document.addEventListener('DOMContentLoaded', () => {
+    const shareBtn = document.getElementById('share-button');
+    if (!navigator.share) {
+        shareBtn.style.display = 'none';
+    }
+});
