@@ -76,14 +76,6 @@ header {
     color: var(--color-text-hover);
 }
 
-.social-icons #share-button {
-    transition: transform 0.2s ease;
-}
-
-.social-icons #share-button:active {
-    transform: scale(0.95);
-}
-
 /* Section spacing */
 .section {
     margin-bottom: var(--spacing-section);
