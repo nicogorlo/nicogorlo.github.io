@@ -22,6 +22,8 @@
     --spacing-item: 30px;       /* New spacing for items */
     --headline-margin: .5em;   /* New spacing for headlines */
     --paragraph-margin: .5em;    /* New spacing for paragraphs */
+    --font-family-base: "DejaVu Serif", Georgia, Garamond, Times, "Times New Roman", serif;
+    --font-family-mono: "SF Mono", "Courier New", Courier, monospace;
 }
 
 /* Base Styles */
@@ -32,6 +34,9 @@ body {
     margin: 50px auto;         /* Restore original margin */
     max-width: var(--max-width);
     color: var(--color-text);
+    font-family: var(--font-family-base);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Layout */
@@ -165,7 +170,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Utilities */
 .code-font {
-    font-family: "Courier New", Courier, monospace;
+    font-family: var(--font-family-mono);
 }
 
 .scrambled {
