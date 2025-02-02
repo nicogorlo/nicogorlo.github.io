@@ -247,6 +247,20 @@ h1, h2, h3, h4, h5, h6 {
         flex-direction: column;
         gap: 15px;
     }
+
+    .publication-item > a {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .publication-image {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .publication-content {
+        width: 100%;
+    }
 }
 
 /* Print Styles */
