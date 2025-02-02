@@ -116,17 +116,39 @@ header {
     display: flex;
     gap: var(--spacing-item);
     margin-bottom: var(--spacing-item);
-    align-items: flex-start;    /* Change to flex-start for better alignment */
+    align-items: flex-start;
+}
+
+.publication-item > a {
+    display: flex;
+    gap: var(--spacing-item);
+    text-decoration: none;
+    color: var(--color-text);
+    width: 100%;
 }
 
 .publication-image {
     flex: 0 0 220px;
 }
 
+.publication-image a {
+    display: block;
+    transition: opacity 0.2s ease;
+}
+
+.publication-image a:hover {
+    opacity: 0.85;
+}
+
 .publication-image img {
     width: 100%;
     height: auto;
     border-radius: var(--border-radius);
+    transition: opacity 0.2s ease;
+}
+
+.publication-item:hover img {
+    opacity: 0.85;
 }
 
 .publication-content {
