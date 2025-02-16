@@ -56,6 +56,13 @@ header {
     flex: 1;
 }
 
+.subtitle {
+    color: var(--color-text);
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-unit);
+    opacity: 0.8;
+}
+
 .profile-image {
     width: 150px;
     height: 150px;
@@ -177,6 +184,11 @@ header {
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: var(--headline-margin);
+}
+
+h1 + .subtitle {
+    margin-top: -1em;  /* Pull subtitle closer to h1 */
+    margin-bottom: var(--spacing-unit);
 }
 
 /* News List */
