@@ -15,7 +15,13 @@
     </image:image>
   </url>
   <url>
-    <loc>https://nicolasgorlo.com/publications</loc>
+    <loc>https://nicolasgorlo.com/LP2_web</loc>
+    <lastmod>2024-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nicolasgorlo.com/isar_wacv24/</loc>
     <lastmod>2024-02-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
