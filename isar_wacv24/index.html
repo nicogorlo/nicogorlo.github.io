@@ -1,0 +1,173 @@
+---
+layout: paper
+title: "ISAR: A Benchmark for Single- and Few-Shot Object Instance Segmentation and Re-Identification"
+description: "ISAR is a benchmark and baseline method for single- and few-shot object instance segmentation and re-identification."
+keywords: "ISAR, instance segmentation, Computer Vision, benchmark, few-shot, single-shot, re-id, Re-Identification"
+image: "/isar_wacv24/assets/images/title_image.jpg"
+authors:
+  - name: Nicolas Gorlo
+    url: https://nicolasgorlo.com
+    affiliation: Autonomous Systems Lab, ETH Zurich
+  - name: Kenneth Blomqvist
+    url: https://keke.dev/
+    affiliation: Autonomous Systems Lab, ETH Zurich
+  - name: Francesco Milano
+    url: https://scholar.google.com/citations?user=qwSANZoAAAAJ
+    affiliation: Autonomous Systems Lab, ETH Zurich
+  - name: Roland Siegwart
+    url: https://asl.ethz.ch/the-lab/people/person-detail.Mjk5ODE=.TGlzdC8yMDI4LDEyMDExMzk5Mjg=.html
+    affiliation: Autonomous Systems Lab, ETH Zurich
+venue: "2024 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)"
+paper_url: https://openaccess.thecvf.com/content/WACV2024/papers/Gorlo_ISAR_A_Benchmark_for_Single-_and_Few-Shot_Object_Instance_Segmentation_WACV_2024_paper.pdf
+arxiv_url: https://arxiv.org/abs/2311.02734
+video_url: https://youtu.be/vMuwoziD3qc
+code_url: https://github.com/nicogorlo/isar
+sitemap:
+  priority: 0.8
+  changefreq: monthly
+---
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">ISAR: A Benchmark for Single- and Few-Shot Object Instance Segmentation and Re-Identification</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://nicolasgorlo.com">Nicolas Gorlo</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://keke.dev/">Kenneth Blomqvist</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=qwSANZoAAAAJ&hl=en&oi=ao">Francesco Milano</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://asl.ethz.ch/the-lab/people/person-detail.Mjk5ODE=.TGlzdC8yMDI4LDEyMDExMzk5Mjg=.html">Roland Siegwart</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Autonomous Systems Lab, ETH Zurich</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://openaccess.thecvf.com/content/WACV2024/papers/Gorlo_ISAR_A_Benchmark_for_Single-_and_Few-Shot_Object_Instance_Segmentation_WACV_2024_paper.pdf" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2311.02734" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://youtu.be/vMuwoziD3qc" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-youtube"></i></span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/nicogorlo/isar" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://www.research-collection.ethz.ch/handle/20.500.11850/642459" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="far fa-images"></i></span>
+                  <span>Data</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="{{ '/isar_wacv24/assets/images/title_image.jpg' | relative_url }}" alt="Dataset Sample">
+      <h2 class="subtitle has-text-centered">
+        Sample from the ISAR benchmark dataset.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Most object-level mapping systems in use today make use
+            of an upstream learned object instance segmentation model.
+            If we want to teach them about a new object or segmentation class, we need to build a large dataset and retrain
+            the system.
+          </p>
+          <p>
+            To build spatial AI systems that can quickly be taught about new objects, we need to effectively solve the problem of single-shot object detection, instance segmentation and re-identification. So far there is neither a method
+            fulfilling all of these requirements in unison nor a benchmark that could be used to test such a method.
+          </p>
+          <p>
+            Addressing this, we propose <b>ISAR</b>, a benchmark and baseline method
+            for single- and few-shot object <b>I</b>nstance <b>S</b>egmentation <b>A</b>nd
+            <b>R</b>e-identification, in an effort to accelerate the development
+            of algorithms that can robustly detect, segment, and reidentify objects from a single or a few sparse training examples. We provide a semi-synthetic dataset of video sequences with ground-truth semantic annotations, a standardized evaluation pipeline, and a baseline method. Our
+            benchmark aligns with the emerging research trend of unifying Multi-Object Tracking, Video Object Segmentation, and Re-identification.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/vMuwoziD3qc?si=NGyXfKQQ8c3QZabK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Dataset</h2>
+        <div class="content">
+          <p>
+            Our dataset is available through the <a href="https://www.research-collection.ethz.ch/handle/20.500.11850/642459">ETH Zurich Research Collection.</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This webpage template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>. We highly appreciate them open-sourcing their template.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

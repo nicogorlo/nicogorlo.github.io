@@ -1,0 +1,35 @@
+---
+layout: default
+title: "Blog - Nicolas Gorlo"
+description: "Research updates and blog posts from Nicolas Gorlo."
+---
+<div class="container">
+  <header>
+    <p class="post-meta">
+      <a href="{{ '/' | relative_url }}">Nicolas Gorlo</a>
+    </p>
+    <h1>Blog</h1>
+  </header>
+
+  <div class="section">
+    {% if site.posts.size > 0 %}
+    <ul class="news-list">
+      {% for post in site.posts %}
+      <li>
+        {{ post.date | date: "%B %Y" }}:
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        {% if post.description %}
+        <br><span style="color: #666; font-size: 0.9em;">{{ post.description }}</span>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>No blog posts yet. Check back soon!</p>
+    {% endif %}
+  </div>
+
+  <div class="section">
+    <p><a href="{{ '/' | relative_url }}">&larr; Back to home</a></p>
+  </div>
+</div>

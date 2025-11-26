@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <meta name="keywords" content="{{ page.keywords }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:image" content="{{ page.image | absolute_url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="{{ page.url | absolute_url }}">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ page.description }}">
+  <meta name="twitter:image" content="{{ page.image | absolute_url }}">
+  <meta name="twitter:site" content="@{{ site.twitter.username }}">
+
+  <!-- Schema.org for Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "{{ page.title }}",
+    "description": "{{ page.description }}",
+    "image": "{{ page.image | absolute_url }}",
+    "url": "{{ page.url | absolute_url }}",
+    "author": [
+      {% for author in page.authors %}{
+        "@type": "Person",
+        "name": "{{ author.name }}",
+        "url": "{{ author.url }}",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "{{ author.affiliation }}"
+        }
+      }{% unless forloop.last %},{% endunless %}{% endfor %}
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ page.venue }}"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ page.url | absolute_url }}"
+    }
+    {% if page.arxiv_url %},"sameAs": ["{{ page.arxiv_url }}"{% if page.paper_url %}, "{{ page.paper_url }}"{% endif %}]{% endif %}
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <!-- Shared Bulma Assets -->
+  <link rel="stylesheet" href="{{ '/assets/css/vendor/bulma.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/vendor/bulma-carousel.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/vendor/bulma-slider.min.css' | relative_url }}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <!-- FontAwesome via CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Paper page styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/paper.css' | relative_url }}">
+</head>
+<body>
+  <!-- Back to main site link -->
+  <nav class="breadcrumb-nav" aria-label="breadcrumb">
+    <div class="container is-max-desktop">
+      <a href="{{ '/' | relative_url }}" class="back-link">
+        <span class="icon"><i class="fas fa-arrow-left"></i></span>
+        <span>Back to nicolasgorlo.com</span>
+      </a>
+    </div>
+  </nav>
+
+  {{ content }}
+
+  <!-- Shared Bulma JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="{{ '/assets/js/vendor/bulma-carousel.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/vendor/bulma-slider.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/paper.js' | relative_url }}"></script>
+</body>
+</html>

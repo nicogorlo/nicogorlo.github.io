@@ -1,0 +1,60 @@
+# Site Settings
+title: "Nicolas Gorlo"
+description: "PhD Student at MIT researching spatial perception and embodied AI"
+author: "Nicolas Gorlo"
+url: "https://nicolasgorlo.com"
+baseurl: ""
+
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+
+# Permalink structure for blog
+permalink: /blog/:year/:month/:title/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Nicolas Gorlo"
+  - scope:
+      path: "LP2_web"
+    values:
+      layout: "paper"
+  - scope:
+      path: "isar_wacv24"
+    values:
+      layout: "paper"
+
+# Plugins (GitHub Pages supported)
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - README.md
+  - CLAUDE.md
+  - vendor
+
+# SEO Settings
+twitter:
+  username: nicolasgorlo
+  card: summary_large_image
+
+social:
+  name: Nicolas Gorlo
+  links:
+    - https://linkedin.com/in/nicolas-gorlo
+    - https://github.com/nicogorlo
+    - https://scholar.google.com/citations?user=UMI50w0AAAAJ
+
+# Google verification
+google_site_verification: PmcaS5fzUZbBnHEy7pf4Dq-AdQ4gx9VGRFAUXwUFS84
