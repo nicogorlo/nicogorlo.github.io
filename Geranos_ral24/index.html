@@ -1,0 +1,218 @@
+---
+layout: paper
+title: "Geranos: A Novel Tilted-Rotors Aerial Robot for the Transportation of Poles"
+description: "Geranos is a specialized multirotor UAV designed for aerial transportation and assembly of vertical poles with sub-5-cm placement accuracy."
+keywords: "Geranos, UAV, drone, aerial transportation, pole stacking, tilted-rotors, ETH Zurich"
+image: "/assets/images/papers/geranos_title_image.jpg"
+authors:
+  - name: Nicolas Gorlo
+    url: https://nicolasgorlo.com
+    affiliation: Autonomous Systems Lab, ETH Zurich
+  - name: Samuel Bamert
+    affiliation: Autonomous Systems Lab, ETH Zurich
+  - name: Rafael Cathomen
+    affiliation: Autonomous Systems Lab, ETH Zurich
+  - name: Gabriel Käppeli
+    affiliation: Autonomous Systems Lab, ETH Zurich
+  - name: Mario Sven Müller
+    affiliation: Autonomous Systems Lab, ETH Zurich
+  - name: Tim Reinhart
+    affiliation: Autonomous Systems Lab, ETH Zurich
+  - name: Henriette Stadler
+    affiliation: Autonomous Systems Lab, ETH Zurich
+  - name: Hua Shen
+    affiliation: Autonomous Systems Lab, ETH Zurich
+  - name: Eugenio Cuniato
+    affiliation: Autonomous Systems Lab, ETH Zurich
+  - name: Marco Tognon
+    affiliation: Autonomous Systems Lab, ETH Zurich
+  - name: Roland Siegwart
+    url: https://asl.ethz.ch/the-lab/people/person-detail.Mjk5ODE=.TGlzdC8yMDI4LDEyMDExMzk5Mjg=.html
+    affiliation: Autonomous Systems Lab, ETH Zurich
+venue: "IEEE Robotics & Automation Magazine (RA-M) 2024"
+paper_url: https://ieeexplore.ieee.org/document/10428092
+arxiv_url: https://arxiv.org/abs/2312.01988
+video_url: https://www.youtube.com/watch?v=3VPKOHuHeBw
+sitemap:
+  priority: 0.8
+  changefreq: monthly
+permalink: /Geranos_ral24/
+---
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            Geranos: A Novel Tilted-Rotors Aerial Robot for the Transportation of Poles
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://nicolasgorlo.com">N. Gorlo</a><sup>1*</sup>,
+            </span>
+            <span class="author-block">
+              S. Bamert<sup>1*</sup>,
+            </span>
+            <span class="author-block">
+              R. Cathomen<sup>1*</sup>,
+            </span>
+            <span class="author-block">
+              G. Käppeli<sup>1*</sup>,
+            </span>
+            <span class="author-block">
+              M. Müller<sup>1*</sup>,
+            </span>
+            <span class="author-block">
+              T. Reinhart<sup>1*</sup>,
+            </span>
+            <span class="author-block">
+              H. Stadler<sup>1*</sup>,
+            </span>
+            <span class="author-block">
+              H. Shen<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              E. Cuniato<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              M. Tognon<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://asl.ethz.ch/the-lab/people/person-detail.Mjk5ODE=.TGlzdC8yMDI4LDEyMDExMzk5Mjg=.html">R. Siegwart</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <sup>1</sup><a href="https://asl.ethz.ch/">Autonomous Systems Lab, ETH Zurich</a>
+            </span>
+          </div>
+          <div class="is-size-6 publication-authors">
+            <span class="author-block">
+              <sup>*</sup>co-first, equal contribution
+            </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://ieeexplore.ieee.org/document/10428092" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2312.01988" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=3VPKOHuHeBw" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-youtube"></i></span>
+                  <span>Video</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <img src="{{ '/assets/images/papers/geranos_title_image.jpg' | relative_url }}" alt="Geranos UAV" />
+          <h2 class="subtitle has-text-centered">
+            Geranos, a specialized multirotor UAV for precise aerial pole transportation and assembly with sub-5-cm placement accuracy.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In challenging terrains, constructing structures, such as antennas and cable car masts, often requires the use of helicopters to transport loads via ropes. The swinging of the loads, exacerbated by wind, impairs positioning accuracy, therefore necessitating precise manual placement by ground crews. This increases costs and the risk of injuries. Challenging this paradigm, we present Geranos, a specialized multirotor unmanned aerial vehicle (UAV) designed to enhance aerial transportation and assembly. Geranos demonstrates exceptional prowess in accurately positioning vertical poles, achieving this through an innovative integration of load transport and precision. Its unique ring design mitigates the impact of high pole inertia, while a lightweight two-part grasping mechanism ensures secure load attachment without active force. With four primary propellers countering gravity and four auxiliary ones enhancing lateral precision, Geranos achieves comprehensive position and attitude control around hovering. Our experimental demonstration mimicking antenna/cable car mast installations showcases Geranos' ability in stacking poles (3 kg, 2 m long) with remarkable sub-5-cm placement accuracy without the need of human manual intervention.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/3VPKOHuHeBw"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Paper</h2>
+        <div class="content has-text-justified">
+          <p>If you find this useful for your research, please consider citing our paper:</p>
+          <ul>
+            Bamert, S., Cathomen, R., Gorlo, N., Käppeli, G., Müller, M.S., Reinhart, T., Stadler, H., Shen, H., Cuniato, E., Tognon, M. and Siegwart, R. "<strong>Geranos: A novel tilted-rotors aerial robot for the transportation of poles.</strong>"
+            <em>IEEE Robotics & Automation Magazine</em> 31.2 (2024): 66-77.
+            [ <a href="https://ieeexplore.ieee.org/document/10428092">Paper</a> |
+            <a href="https://arxiv.org/abs/2312.01988">Preprint</a> |
+            <a href="https://www.youtube.com/watch?v=3VPKOHuHeBw">Video</a> ]
+          </ul>
+          <pre><code class="language-bibtex">@article{geranos2024,
+  title={Geranos: A novel tilted-rotors aerial robot for the transportation of poles},
+  author={Bamert, Samuel and Cathomen, Rafael and Gorlo, Nicolas and K{\"a}ppeli, Gabriel and M{\"u}ller, Mario Sven and Reinhart, Tim and Stadler, Henriette and Shen, Hua and Cuniato, Eugenio and Tognon, Marco and others},
+  journal={IEEE Robotics \& Automation Magazine},
+  volume={31},
+  number={2},
+  pages={66--77},
+  year={2024},
+  publisher={IEEE}
+}</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This webpage template is borrowed from
+            <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>. We highly appreciate them open-sourcing their template.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
