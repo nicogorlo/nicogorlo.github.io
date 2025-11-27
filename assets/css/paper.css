@@ -20,7 +20,7 @@
 
 /* Paper page styles */
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "DejaVu Serif", Georgia, Garamond, Times, "Times New Roman", serif;
 }
 
 .footer .icon-link {
@@ -43,15 +43,15 @@ body {
 }
 
 .teaser {
-  font-family: 'Google Sans', sans-serif;
+  font-family: "DejaVu Serif", Georgia, Garamond, Times, "Times New Roman", serif;
 }
 
 .publication-title {
-  font-family: 'Google Sans', sans-serif;
+  font-family: "DejaVu Serif", Georgia, Garamond, Times, "Times New Roman", serif;
 }
 
 .publication-authors {
-  font-family: 'Google Sans', sans-serif;
+  font-family: "DejaVu Serif", Georgia, Garamond, Times, "Times New Roman", serif;
 }
 
 .publication-venue {
