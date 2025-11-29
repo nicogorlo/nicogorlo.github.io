@@ -23,6 +23,24 @@ sitemap:
   changefreq: monthly
 permalink: /DAAAM_25/
 ---
+<style>
+.video-progress-container {
+  width: 100%;
+  height: 3px;
+  background: #e0e0e0;
+  border-radius: 2px;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+.video-progress-bar {
+  height: 100%;
+  background: #3273dc;
+  border-radius: 2px;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+</style>
+
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -132,9 +150,9 @@ permalink: /DAAAM_25/
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">System Overview</h2>
+        <h2 class="title is-3">Approach Overview</h2>
         <div class="content has-text-centered">
-          <img src="{{ '/DAAAM_25/assets/images/system_overview_newer_compressed.png' | relative_url }}" alt="DAAAM System Overview" style="width: 100%; border-radius: 10px;" />
+          <img src="{{ '/DAAAM_25/assets/images/system_overview_newer_compressed.png' | relative_url }}" alt="DAAAM Approach Overview" style="width: 100%; border-radius: 10px;" />
         </div>
         <div class="content has-text-justified">
           <p>
@@ -151,11 +169,28 @@ permalink: /DAAAM_25/
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Qualitative Results</h2>
-        <div class="content has-text-centered">
-          <video autoplay loop muted playsinline style="width: 100%; border-radius: 10px;">
-            <source src="{{ '/DAAAM_25/assets/images/results_teaser.webm' | relative_url }}" type="video/webm">
-          </video>
-        </div>
+          <h3 class="title is-4">
+            Spatial Queries
+          </h3>
+          <div class="content has-text-centered">
+            <div class="video-progress-container">
+              <div class="video-progress-bar" id="progress-1"></div>
+            </div>
+            <video autoplay loop muted playsinline style="width: 100%; border-radius: 10px;">
+              <source src="{{ '/DAAAM_25/assets/images/results_teaser_1.webm' | relative_url }}" type="video/webm">
+            </video>
+          </div>
+          <h3 class="title is-4">
+            Temporal Queries
+          </h3>
+          <div class="content has-text-centered">
+            <div class="video-progress-container">
+              <div class="video-progress-bar" id="progress-2"></div>
+            </div>
+            <video autoplay loop muted playsinline style="width: 100%; border-radius: 10px;">
+              <source src="{{ '/DAAAM_25/assets/images/results_teaser_2.webm' | relative_url }}" type="video/webm">
+            </video>
+          </div>
         <div class="content has-text-justified">
           <p>
             DAAAM enables spatio-temporal question answering in complex, large-scale environments. By building a hierarchical 4D scene graph with detailed descriptions, DAAAM can accurately answer questions about object locations, temporal events, and spatial relationships.
@@ -207,6 +242,23 @@ permalink: /DAAAM_25/
     </div>
   </div>
 </section>
+
+<script>
+document.querySelectorAll('video').forEach((video, i) => {
+  const bar = document.getElementById('progress-' + (i + 1));
+  const container = bar ? bar.parentElement : null;
+  if (bar && container) {
+    video.addEventListener('timeupdate', () => {
+      bar.style.width = (video.currentTime / video.duration * 100) + '%';
+    });
+    container.addEventListener('click', (e) => {
+      const rect = container.getBoundingClientRect();
+      const percent = (e.clientX - rect.left) / rect.width;
+      video.currentTime = percent * video.duration;
+    });
+  }
+});
+</script>
 
 <footer class="footer">
   <div class="container">
