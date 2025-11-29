@@ -28,6 +28,14 @@ defaults:
       path: "isar_wacv24"
     values:
       layout: "paper"
+  - scope:
+      path: "Geranos_ral24"
+    values:
+      layout: "paper"
+  - scope:
+      path: "DAAAM_25"
+    values:
+      layout: "paper"
 
 # Plugins (GitHub Pages supported)
 plugins:

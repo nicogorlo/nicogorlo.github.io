@@ -1,0 +1,228 @@
+---
+layout: paper
+title: "Describe Anything, Anywhere, at Any Moment"
+description: "DAAAM is a novel spatio-temporal memory framework for large-scale and real-time 4D scene understanding, building hierarchical 4D scene graphs with detailed natural language descriptions."
+keywords: "DAAAM, 4D scene graph, spatio-temporal memory, scene understanding, trajectory prediction, embodied AI, robotics, MIT SPARK"
+image: "/DAAAM_25/assets/images/Title_Figure_compressed.drawio.png"
+authors:
+  - name: Nicolas Gorlo
+    url: https://nicolasgorlo.com
+    affiliation: MIT SPARK Lab
+  - name: Lukas Schmid
+    url: https://schmluk.github.io/
+    affiliation: MIT SPARK Lab
+  - name: Luca Carlone
+    url: https://lucacarlone.mit.edu/
+    affiliation: MIT SPARK Lab
+paper_url: "#"
+arxiv_url: "#"
+video_url: "#"
+code_url: "#"
+sitemap:
+  priority: 0.8
+  changefreq: monthly
+permalink: /DAAAM_25/
+---
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            Describe Anything, Anywhere, at Any Moment
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://nicolasgorlo.com">Nicolas Gorlo</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://schmluk.github.io/">Lukas Schmid</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://lucacarlone.mit.edu/">Luca Carlone</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <sup>1</sup><a href="https://web.mit.edu/sparklab/">MIT SPARK Lab</a>
+            </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper (coming soon)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>arXiv (coming soon)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-youtube"></i></span>
+                  <span>Video (coming soon)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code (coming soon)</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <img src="{{ '/DAAAM_25/assets/images/Title_Figure_compressed.drawio.png' | relative_url }}" alt="DAAAM Overview" />
+          <h2 class="subtitle has-text-centered">
+            DAAAM builds a hierarchical 4D scene graph as spatio-temporal memory, enabling embodied agents to describe anything, anywhere, at any moment.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Computer vision and robotics applications ranging from augmented reality to robot autonomy in large-scale environments require spatio-temporal memory frameworks that capture both geometric structure for accurate language-grounding as well as semantic detail. Existing methods face a tradeoff, where producing rich open-vocabulary descriptions comes at the expense of real-time performance when these descriptions have to be grounded in 3D.
+          </p>
+          <p>
+            To address these challenges, we propose <b>Describe Anything, Anywhere, at Any Moment (DAAAM)</b>, a novel spatio-temporal memory framework for large-scale and real-time 4D scene understanding. DAAAM introduces a novel optimization-based frontend to infer detailed semantic descriptions from localized captioning models, such as the Describe Anything Model (DAM), leveraging batch processing to speed up inference by an order of magnitude for online processing. It leverages such semantic understanding to build a hierarchical 4D scene graph (SG), which acts as an effective globally spatially and temporally consistent memory representation. DAAAM constructs 4D SGs with detailed, geometrically grounded descriptions while maintaining real-time performance. We show that DAAAM's 4D SG interfaces well with a tool-calling agent for inference and reasoning.
+          </p>
+          <p>
+            We thoroughly evaluate DAAAM in the complex task of spatio-temporal question answering on the NaVQA benchmark and show its generalization capabilities for sequential task grounding on the SG3D benchmark. We further curate an extended OC-NaVQA benchmark for large-scale and long-time evaluations. DAAAM achieves state-of-the-art results in both tasks, improving OC-NaVQA question accuracy by 53.6%, position errors by 21.9%, temporal errors by 21.6%, and SG3D task grounding accuracy by 27.8% over the most competitive baselines, respectively. We release our data and code open-source.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <p style="padding: 50px 0; color: #666;">Video coming soon</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">System Overview</h2>
+        <div class="content has-text-centered">
+          <img src="{{ '/DAAAM_25/assets/images/system_overview_newer_compressed.png' | relative_url }}" alt="DAAAM System Overview" style="width: 100%; border-radius: 10px;" />
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Given an RGB-D video stream, DAAAM first segments the scene into fragments and tracks them over time. We perform metric-semantic mapping to build a 4D map of the environment. To semantically lift the resulting map, we aggregate the tracked observations and select frames using an optimization-based frame selection algorithm. The selected frames and segments are batch-processed by the Describe Anything Model (DAM) to generate detailed descriptions for each object. The generated descriptions are incorporated back into the map and a 4D scene graph is constructed and clustered into semantically informed regions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Qualitative Results</h2>
+        <div class="content has-text-centered">
+          <video autoplay loop muted playsinline style="width: 100%; border-radius: 10px;">
+            <source src="{{ '/DAAAM_25/assets/images/results_teaser.webm' | relative_url }}" type="video/webm">
+          </video>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            DAAAM enables spatio-temporal question answering in complex, large-scale environments. By building a hierarchical 4D scene graph with detailed descriptions, DAAAM can accurately answer questions about object locations, temporal events, and spatial relationships.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-centered">
+          <img src="{{ '/DAAAM_25/assets/images/results_w_improvement.png' | relative_url }}" alt="DAAAM Results" style="width: 100%; border-radius: 10px;" />
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            DAAAM achieves state-of-the-art results on both spatio-temporal question answering (OC-NaVQA) and sequential task grounding (SG3D) benchmarks, with significant improvements over prior methods across all metrics.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Paper</h2>
+        <div class="content has-text-justified">
+          <p>If you find this useful for your research, please consider citing our paper:</p>
+          <ul>
+            Nicolas Gorlo, Lukas Schmid, and Luca Carlone, "<strong>Describe Anything, Anywhere, at Any Moment</strong>".
+            [ Paper | Preprint | Video ] (coming soon)
+          </ul>
+          <pre><code class="language-bibtex">% TODO: Citation will be added once the paper is available on arXiv
+@article{gorlo2025daaam,
+  title={Describe Anything Anywhere At Any Moment},
+  author={Gorlo, Nicolas and Schmid, Lukas and Carlone, Luca},
+  journal={arXiv preprint},
+  year={2025}
+}</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This webpage template is borrowed from
+            <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>. We highly appreciate them open-sourcing their template.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
