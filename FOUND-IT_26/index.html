@@ -1,0 +1,257 @@
+---
+layout: paper
+title: "FOUND-IT: Foundation-model-first Task-driven 3D Scene Graphs with Granularity on Demand"
+description: "FOUND-IT builds hierarchical, task-driven, open-set 3D scene graphs of indoor and outdoor environments in real-time from an uncalibrated monocular camera, using geometric foundation models with granularity on demand."
+keywords: "FOUND-IT, 3D scene graph, geometric foundation models, VGGT, VGGT-SLAM, task-driven, open-set, granularity on demand, monocular SLAM, traversability, robotics, spatial perception, MIT SPARK"
+image: "/FOUND-IT_26/assets/images/intro.jpg"
+authors:
+  - name: Dominic Maggio
+    url: https://dominic101.github.io/DominicMaggio/
+    affiliation: MIT SPARK Lab
+  - name: Nicolas Gorlo
+    url: https://nicolasgorlo.com
+    affiliation: MIT SPARK Lab
+  - name: Luca Carlone
+    url: https://lucacarlone.mit.edu/
+    affiliation: MIT SPARK Lab
+paper_url: "https://arxiv.org/pdf/2605.25371"
+arxiv_url: "https://arxiv.org/abs/2605.25371"
+arxiv_id: "2605.25371"
+video_url: "https://www.youtube.com/watch?v=gaPeSTlYQKE"
+sitemap:
+  priority: 0.8
+  changefreq: monthly
+permalink: /FOUND-IT_26/
+---
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            FOUND-IT: Foundation-model-first Task-driven 3D Scene Graphs with Granularity on Demand
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://dominic101.github.io/DominicMaggio/">Dominic Maggio</a><sup>1,*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://nicolasgorlo.com">Nicolas Gorlo</a><sup>1,*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://lucacarlone.mit.edu/">Luca Carlone</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <sup>1</sup><a href="https://web.mit.edu/sparklab/">MIT SPARK Lab</a>
+            </span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>*</sup>Equal contribution.</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2605.25371" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2605.25371" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=gaPeSTlYQKE" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-youtube"></i></span>
+                  <span>Video</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <img src="{{ '/FOUND-IT_26/assets/images/intro.jpg' | relative_url }}" alt="FOUND-IT scene graphs built from YouTube home-tour videos" />
+          <h2 class="subtitle has-text-centered">
+            Example 3D scene graphs constructed by FOUND-IT from casually captured home-tour videos from YouTube. Top: example room detections; the places layer, used for planning over traversable space, is shown as tiles on the floor and clustered into regions. Bottom: example object detections for text queries.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present the first approach to build hierarchical task-driven 3D scene graphs of arbitrary indoor or outdoor environments using an uncalibrated monocular camera in real-time. We leverage geometric foundation models to estimate geometric attributes of the scene graph (e.g., object bounding boxes), but we also observe that traversability information (the "places" layer of a scene graph) can be directly reconstructed by adding an extra head to existing geometric foundation models, like VGGT.
+          </p>
+          <p>
+            Our approach is task-driven in the sense that we adjust the granularity of the objects and regions in the map depending on the task; for instance, during a manipulation task, our approach is able to resolve small knobs on a stove, while during a navigation task it can focus on large objects (e.g., the entire stove). However, in a major departure from related work, we consider the realistic case where the list of tasks is not predefined and fixed, but evolves as the robot operates. This naturally allows dealing with complex loco-manipulation tasks, where the robot can dynamically adjust its representation as the task unfolds. We dub the resulting approach <b>FOUND-IT</b>. FOUND-IT also includes an agentic approach to query information in the scene graph.
+          </p>
+          <p>
+            In addition to achieving 79% higher accuracy on the ASHiTA SG3D task grounding benchmark, we demonstrate FOUND-IT runs in real-time on a ground robot using a Jetson Thor. Furthermore, to highlight the robustness of our method, we demonstrate constructing 3D scene graphs on casually captured realtor apartment tours from YouTube. Code will be made available upon publication.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/gaPeSTlYQKE?si=YEaWqG_L3RHlosrf"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Approach Overview</h2>
+        <div class="content has-text-centered">
+          <img src="{{ '/FOUND-IT_26/assets/images/indoor_outdoor.jpg' | relative_url }}" alt="An LLM agent orchestrates FOUND-IT to build a scene graph across indoor and outdoor space" style="width: 100%; border-radius: 10px;" />
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            FOUND-IT is a real-time, open-set, hierarchical 3D scene graph construction system that generates maps in indoor and outdoor environments and dynamically adjusts their granularity depending on the task. Two ideas set it apart:
+          </p>
+          <ul class="has-text-justified">
+            <li>
+              <b>Foundation-model-first.</b> Through tightly coupled integration with Geometric Foundation Models (GFMs), FOUND-IT is built on top of VGGT-SLAM 2.0, making it the first 3D scene graph construction method using an uncalibrated monocular camera. GFMs estimate the geometric attributes of the scene graph (e.g., object bounding boxes), and we further observe that the traversability ("places") layer can be directly reconstructed by adding an extra head to existing GFMs like VGGT. This greatly simplifies the architecture and removes the dependence on calibrated stereo cameras or depth sensors.
+            </li>
+            <li>
+              <b>Task-oriented mapping with granularity on demand.</b> FOUND-IT is task-driven in the sense that it adjusts the granularity of both objects and regions depending on the task; for instance, during a manipulation task it can resolve small knobs on a stove, while during a navigation task it can focus on large objects such as the entire stove. In contrast to existing works, the list of tasks is not predefined and fixed, but evolves as the robot operates (intuitively, the approach is prompted with a task at runtime, just like a Vision-Language-Action model).
+            </li>
+          </ul>
+          <p>
+            As shown above, an LLM agent grounds a sequence of tasks into a scene graph spanning indoor and outdoor areas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Granularity on Demand</h2>
+        <div class="content has-text-centered">
+          <img src="{{ '/FOUND-IT_26/assets/images/heart.jpg' | relative_url }}" alt="The same scene queried at two granularities: one heart, or 45 washers" style="width: 100%; border-radius: 10px;" />
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Querying the same scene at two different granularities ("heart" and "washer"), and detecting many objects (45 washers). Granularity is determined at query time rather than fixed at mapping time. Left: 3D bounding boxes for both queries. Middle and right: the corresponding SAM 3 segmented keyframe for each query.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Open-Set Multi-Instance Querying</h2>
+        <div class="content has-text-centered">
+          <img src="{{ '/FOUND-IT_26/assets/images/sparse_keyboards.jpg' | relative_url }}" alt="Five keyboards recovered for a single query" style="width: 100%; border-radius: 10px;" />
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Finding multiple object instances for a single query, here five keyboards for the query "keyboard". Because FOUND-IT keeps passing matching keyframes to SAM 3 as long as new instances are found, it recovers all instances, unlike methods that segment only the top-scoring keyframe.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            FOUND-IT achieves top performance on open-set 3D object detection on the Clio dataset and 79% higher accuracy on the ASHiTA SG3D task grounding benchmark. The full pipeline runs in real-time: 6 fps with VGGT and 7 fps with the lighter-weight Depth Anything 3 GFM on a 3090 GPU, with the GFM being the slowest component. By swapping in the lighter GFM, the full scene graph is constructed in real-time at 4 Hz onboard a Spot quadruped robot using a Jetson Thor. Querying a single object from visual memory takes about 100 ms, and clustering and extracting a region takes about 530 ms.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Paper</h2>
+        <div class="content has-text-justified">
+          <p>If you find this useful for your research, please consider citing our paper:</p>
+          <ul>
+            Dominic Maggio*, Nicolas Gorlo*, and Luca Carlone, "FOUND-IT: Foundation-model-first Task-driven 3D Scene Graphs with Granularity on Demand". arXiv preprint arXiv:2605.25371, 2026.
+          </ul>
+          <pre><code class="language-bibtex">{% raw %}@article{Maggio26arxiv-FOUNDIT,
+  title={{FOUND-IT}: Foundation-model-first Task-driven {3D} Scene Graphs with Granularity on Demand},
+  author={Maggio, Dominic and Gorlo, Nicolas and Carlone, Luca},
+  journal={arXiv preprint arXiv:2605.25371},
+  year={2026}
+}{% endraw %}</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This webpage template is borrowed from
+            <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>. We highly appreciate them open-sourcing their template.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -36,6 +36,10 @@ defaults:
       path: "DAAAM_25"
     values:
       layout: "paper"
+  - scope:
+      path: "FOUND-IT_26"
+    values:
+      layout: "paper"
 
 # Plugins (GitHub Pages supported)
 plugins:
