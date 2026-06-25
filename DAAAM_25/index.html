@@ -39,6 +39,22 @@ permalink: /DAAAM_25/
   width: 0%;
   transition: width 0.1s linear;
 }
+.news-coverage-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.news-coverage-logo {
+  height: 45px;
+  width: auto;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+.news-coverage-logo:hover {
+  opacity: 1;
+}
 </style>
 
 <section class="hero">
@@ -222,6 +238,26 @@ permalink: /DAAAM_25/
           <p>
             DAAAM achieves state-of-the-art results on both spatio-temporal question answering (OC-NaVQA) and sequential task grounding (SG3D) benchmarks.
           </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">News Coverage</h2>
+        <div class="content has-text-centered">
+          <div class="news-coverage-logos">
+            <a href="https://news.mit.edu/2026/could-ai-tell-you-where-you-left-your-keys-0617" target="_blank" rel="noopener noreferrer" aria-label="MIT News coverage">
+              <img src="{{ '/DAAAM_25/assets/images/logos/mit_logo.svg' | relative_url }}" alt="MIT News" class="news-coverage-logo" />
+            </a>
+            <a href="https://www.forbes.com/sites/ronschmelzer/2026/06/23/robot-memory-is-the-next-big-robotics-frontier/" target="_blank" rel="noopener noreferrer" aria-label="Forbes coverage">
+              <img src="{{ '/DAAAM_25/assets/images/logos/forbes_logo.svg' | relative_url }}" alt="Forbes" class="news-coverage-logo" />
+            </a>
+          </div>
         </div>
       </div>
     </div>
